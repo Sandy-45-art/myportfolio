@@ -1,44 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sandhiya S | Frontend Developer</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
+        <!-- Profile image (placeholder for now) -->
+        <img src="https://via.placeholder.com/150" alt="Profile photo coming soon!" class="profile-pic">
+
         <h1>Hi, I'm Sandhiya S</h1>
         <p>Frontend Developer | Web Designer</p>
     </header>
+
     <section id="about">
         <h2>About Me</h2>
-        <p style="text-align: center;">Hello! I'm a passionate web developer specializing in frontend development. I love creating user-friendly websites.</p>
+        <p style="text-align: center;">
+            Hi! I'm Sandhiya, a creative and playful frontend developer and web designer. I love crafting user-friendly
+            websites that not only work flawlessly but also look amazing.
+            Alongside my coding skills in HTML, CSS, and JavaScript, I’m skilled in Photoshop, Illustrator, CorelDRAW,
+            and Canva — blending design and development to bring ideas to life.
+        </p>
     </section>
+
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Git & GitHub</li>
+            <li class="web-skill">HTML</li>
+            <li class="web-skill">CSS</li>
+            <li class="web-skill">JavaScript</li>
+            <li class="design-tool">Photoshop</li>
+            <li class="design-tool">Illustrator</li>
+            <li class="design-tool">CorelDRAW</li>
+            <li class="design-tool">Canva</li>
         </ul>
+
     </section>
+
     <section id="projects">
         <h2>Projects</h2>
+
         <div class="project">
-            <h3>Project 1</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis ratione odit minus ipsa nulla tempore saepe facere pariatur animi cupiditate voluptate labore, enim recusandae perferendis. Assumenda laborum nisi tempora animi?</p>
+            <h3>Grammar Learning Platform</h3>
+            <p>A web app that helps students learn grammar through lessons, videos, and quizzes with progress tracking.
+                Built using Firebase and JavaScript.</p>
+            <p><a href="https://github.com/Sandy-45-art/grammar-platform" target="_blank">View on GitHub</a></p>
         </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione deleniti amet praesentium obcaecati, reprehenderit hic. Molestiae nostrum natus, sit maxime eum iusto exercitationem porro eius eligendi nesciunt ipsam, veritatis sapiente.</p>
-        </div>
+
     </section>
+
+    <section id="learning">
+        <h2>Currently Learning</h2>
+        <ul>
+            <li>React.js</li>
+            <li>Firebase Firestore advanced features</li>
+            <li>Responsive Design Techniques</li>
+            <li>UI/UX Basics using Figma & Canva</li>
+        </ul>
+    </section>
+
+
     <section id="contact">
         <h2>Contact Me</h2>
         <p>Email: sandhiyapsakthivel@gmail.com</p>
-        <p>GitHub: <a href="https://github.com/your-username" target="_blank">your-username</a></p>
+        <p>GitHub: <a href="https://github.com/Sandy-45-art" target="_blank">Sandhiya Sakthivel</a></p>
+
+        <!-- Resume Button -->
+        <a href="sandhiya _resume_1.pdf" class="download-btn" download>Download Resume</a>
     </section>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        const revealOnScroll = () => {
+            const windowBottom = window.innerHeight;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < windowBottom - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+
+
 </body>
+
 </html>
