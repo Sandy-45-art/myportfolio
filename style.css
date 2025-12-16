@@ -1,6 +1,7 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', Arial, sans-serif; /* Modern, friendly font */
+    font-family: 'Poppins', Arial, sans-serif;
+    /* Modern, friendly font */
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #f0f4ff, #d9e4ff);
@@ -13,7 +14,8 @@ body {
 
 /* Header Section */
 header {
-    background-color: #5a67d8; /* Playful purple-blue */
+    background-color: #5a67d8;
+    /* Playful purple-blue */
     color: white;
     text-align: center;
     padding: 60px 20px;
@@ -26,7 +28,8 @@ header {
 }
 
 header:hover {
-    background-color: #4c51bf; /* Slightly deeper purple on hover for fun effect */
+    background-color: #4c51bf;
+    /* Slightly deeper purple on hover for fun effect */
 }
 
 /* Animated floating circles in header background */
@@ -41,6 +44,7 @@ header::before {
     left: 20%;
     animation: float 6s ease-in-out infinite alternate;
 }
+
 header::after {
     content: "";
     position: absolute;
@@ -55,8 +59,13 @@ header::after {
 
 /* Floating animation */
 @keyframes float {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(20px); }
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(20px);
+    }
 }
 
 header h1 {
@@ -64,7 +73,7 @@ header h1 {
     margin: 0;
     font-weight: 700;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
 }
 
@@ -105,7 +114,8 @@ section {
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(90, 103, 216, 0.15);
     transition: box-shadow 0.3s ease, transform 0.5s ease, opacity 0.6s ease;
-    opacity: 0; /* for fade-in effect */
+    opacity: 0;
+    /* for fade-in effect */
     transform: translateY(20px);
 }
 
@@ -170,7 +180,8 @@ ul li:hover {
 
 /* Design tools with playful color */
 ul li.design-tool {
-    background: #ff6f61; /* warm coral, playful and creative */
+    background: #ff6f61;
+    /* warm coral, playful and creative */
     color: white;
     box-shadow: 0 4px 12px rgba(255, 111, 97, 0.5);
     font-style: italic;
@@ -178,7 +189,8 @@ ul li.design-tool {
 
 /* Icons next to design tools */
 ul li.design-tool::before {
-    content: "🎨"; /* palette emoji */
+    content: "🎨";
+    /* palette emoji */
     margin-right: 8px;
     font-size: 1.2rem;
     position: relative;
@@ -192,7 +204,8 @@ ul li.design-tool:hover {
 
 /* Add icons for general skills */
 ul li.web-skill::before {
-    content: "💻"; /* laptop emoji */
+    content: "💻";
+    /* laptop emoji */
     margin-right: 8px;
     font-size: 1.2rem;
     position: relative;
@@ -270,22 +283,15 @@ ul li.web-skill::before {
 /* Download button */
 .download-btn {
     display: inline-block;
-    margin-top: 15px;
     padding: 12px 30px;
-    background-color: #5a67d8;
-    color: white;
-    border: none;
+    background: #5a67d8;
+    color: #fff;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 700;
-    box-shadow: 0 6px 15px rgba(90, 103, 216, 0.5);
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.download-btn:hover {
-    background-color: #434190;
-    transform: scale(1.05);
-}
+
 
 /* Responsive tweaks for small screens */
 @media (max-width: 600px) {
@@ -321,4 +327,19 @@ ul li.web-skill::before {
     .download-btn {
         padding: 12px 25px;
     }
+}
+
+/* Project screenshots */
+.project-images {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.project-images img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
 }
